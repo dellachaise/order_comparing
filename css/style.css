@@ -1,6 +1,8 @@
 .input {
 	width: 30%;
 	text-align: : right;
-	/* position: absolute;
-	right: 0; */
+}
+
+.container:nth-child(odd) {
+	margin-bottom: 16 px;
 }
