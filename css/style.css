@@ -2,7 +2,3 @@
 	width: 30%;
 	text-align: : right;
 }
-
-.container:nth-child(odd) {
-	margin-bottom: 16 px;
-}
