@@ -6,7 +6,7 @@ from pricecomp.apps.shop.models import Product
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Product
-        fields = ('name', 'metro', 'fozi', 'auchan', 'novus')
+        fields = ('name', 'metro', 'fozzy', 'auchan', 'novus')
 
 
 class ProductViewSet(viewsets.ModelViewSet):

@@ -5,7 +5,7 @@ class Product(models.Model):
     name = models.CharField(max_length=200)
     order = models.IntegerField(default=0)
     metro = models.URLField()
-    fozi = models.URLField()
+    fozzy = models.URLField()
     auchan = models.URLField()
     novus = models.URLField()
 
@@ -14,8 +14,8 @@ class Product(models.Model):
         return _parse_url(self.metro)
 
     @property
-    def fozi_id(self):
-        return _parse_url(self.fozi)
+    def fozzy_id(self):
+        return _parse_url(self.fozzy)
 
     @property
     def auchan_id(self):
