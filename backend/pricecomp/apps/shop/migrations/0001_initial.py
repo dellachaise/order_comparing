@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=200)),
                 ('order', models.IntegerField(default=0)),
                 ('metro', models.URLField()),
-                ('fozi', models.URLField()),
+                ('fozzy', models.URLField()),
                 ('auchan', models.URLField()),
                 ('novus', models.URLField()),
             ],
