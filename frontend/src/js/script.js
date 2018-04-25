@@ -8,6 +8,6 @@ $(document).ready(function(){
 			novus: $("#novus_url").val(),
 			auchan: $("#ashan_url").val()
 		}
-		$.post("http://127.0.0.1:8000/api/v1/goods/", data);
+		$.post("http://localhost:8000/api/v1/goods/", data);
 	});
 });
