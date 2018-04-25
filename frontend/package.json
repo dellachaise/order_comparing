@@ -1,0 +1,16 @@
+{
+  "name": "order_comparing",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "git@github.com:dellachaise/order_comparing.git",
+  "author": "dellachaise <dellachaise@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --open"
+  },
+  "devDependencies": {
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3"
+  }
+}
