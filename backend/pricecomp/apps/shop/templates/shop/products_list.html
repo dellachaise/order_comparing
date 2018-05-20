@@ -1,0 +1,51 @@
+{% extends "shop/base.html" %}
+{% load static %}
+
+{% block extrascript %}
+	<script src="{% static "shop/js/calc.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+	<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th scope="col">Name</th>
+			<th scope="col" colspan="2">Metro</th>
+			<th scope="col" colspan="2">Fozzy</th>
+			<th scope="col" colspan="2">Auchan</th>
+			<th scope="col" colspan="2">Novus</th>
+			<th scope="col">Count</th>
+		</tr>
+		</thead>
+		<tbody>
+		{% for product in products %}
+			<tr>
+				<td>{{ product.name }}</td>
+
+				<td id="price_metro_{{ product.id }}">{{ product.price_metro }}</td>
+				<td><span id="price_metro_{{ product.id }}_sum" class="metro_sum"></span></td>
+
+				<td id="price_fozi_{{ product.id }}">{{ product.price_fozi }}</td>
+				<td><span id="price_fozi_{{ product.id }}_sum" class="fozi_sum"></span></td>
+
+				<td id="price_auchan_{{ product.id }}">{{ product.price_auchan }}</td>
+				<td><span id="price_auchan_{{ product.id }}_sum" class="auchan_sum"></span></td>
+
+				<td id="price_novus_{{ product.id }}">{{ product.price_novus }}</td>
+				<td><span id="price_novus_{{ product.id }}_sum" class="novus_sum"></span></td>
+
+				<td><input value="0" name="count_{{ product.id }}"
+						   data-product_id="{{ product.id }}" type="number" class="count" /></td>
+			</tr>
+		{% endfor %}
+			<tr>
+				<td>total:</td>
+				<td colspan="2" id="metro_sum_total"></td>
+				<td colspan="2" id="fozi_sum_total"></td>
+				<td colspan="2" id="auchan_sum_total"></td>
+				<td colspan="2" id="novus_sum_total"></td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+{% endblock %}

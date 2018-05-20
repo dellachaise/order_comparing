@@ -18,6 +18,7 @@ from django.urls import path, include
 from rest_framework import routers
 
 from pricecomp.apps.shop.views import ProductViewSet
+from pricecomp.apps.shop.urls import urlpatterns as shop_urls
 
 router = routers.DefaultRouter()
 router.register(r'goods', ProductViewSet)
@@ -25,4 +26,5 @@ router.register(r'goods', ProductViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'api/v1/', include(router.urls)),
+    path(r'shop/', include(shop_urls)),
 ]
